@@ -11,10 +11,10 @@ object HelloWorld {
 //        println(buildsbt.apply(1,2))
 
         // use case class
-        val buildsbt = SourceCode("aaa", "kkk", Nil)
+        val buildsbt = new SourceCode("aaa", "kkk", Nil)
         println(buildsbt)
-        val copy = buildsbt.copy(name = "bbb")
-        println(copy)
+//        val copy = buildsbt.copy(name = "bbb")
+//        println(copy)
     }
     def add(x : Int, y : Int) : Int = {
         x + y

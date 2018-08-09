@@ -9,3 +9,5 @@ libraryDependencies ++= Seq(
     "org.pegdown" % "pegdown" % "1.6.0" % "test", //used in html report
     "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 )
+
+mainClass in assembly := Some(com.lesson1.Main)
