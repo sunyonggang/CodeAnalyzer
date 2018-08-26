@@ -1,5 +1,7 @@
 package com.lesson1
 
+import com.tutor.SourceCode
+
 object HelloWorld {
     def main(args: Array[String]): Unit = {
         println("syg is 1")

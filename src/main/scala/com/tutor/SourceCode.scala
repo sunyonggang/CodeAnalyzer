@@ -1,4 +1,7 @@
-package com.lesson1
+package com.tutor
+
+import com.tutor.utils.FileUtil
+import com.tutor.utils.FileUtil.Path
 
 class SourceCode(var name : String, val path : String, val lines : List[String]) {
     def count : Int = lines.length
@@ -8,11 +11,12 @@ class SourceCode(var name : String, val path : String, val lines : List[String])
 //case class SourceCode(name : String, path : String, lines : List[String])
 
 object SourceCode{
-    type Path = String
     def fromFile(path : Path) : SourceCode = {
         import scala.io._
         val source = Source.fromFile(path)
         val lines = source.getLines().toList
-        new SourceCode(path.split("/").last, path, lines)
+        new SourceCode(FileUtil.extractLocalPath(path), path, lines)
     }
+
+
 }
